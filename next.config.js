@@ -1,5 +1,8 @@
 const withPreact = require('next-plugin-preact')
+const withPWA = require('next-pwa')
 
-module.exports = withPreact({
-  /* regular next.js config options here */
-})
+module.exports = withPWA(withPreact({
+  pwa: {
+    dest: 'public'
+  }
+}))
